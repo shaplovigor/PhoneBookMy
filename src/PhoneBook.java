@@ -105,8 +105,10 @@ public class PhoneBook {
     public static void list(String[][] book) {
         //print phone book
         //Arrays.sort(book);
-        for (int i=0; i < book.length; i++)
+        for (int i=0; i < book.length; i++) {
+            if (book[i][0] == null) break;
             System.out.printf("ФИО: " + book[i][0] + " номер: " + book[i][1] + "\n");
+        }
     }
 
 }
